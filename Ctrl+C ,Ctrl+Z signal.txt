@@ -1,0 +1,17 @@
+. Ctrl+C (Send SIGINT) 
+• Sends SIGINT (Signal Interrupt, signal number 2) to the foreground process. 
+• Purpose: Ask the process to terminate gracefully. 
+➜  ~ yes > /dev/null 
+^C 
+Ctrl+Z (Send SIGTSTP) 
+• Sends SIGTSTP (Terminal Stop, signal number 20) to the foreground process. 
+• Purpose: Pause the process (not kill), and send it to the background in stopped 
+state. 
+➜  ~ sleep 1000 
+^Z 
+[1]  + 3135 suspended  sleep 1000 
+➜  ~ ps -o pid,pgid,tpgid,comm 
+PID    PGID   TPGID COMMAND 
+2877    2877    3140 zsh 
+3135    3135    3140 sleep 
+3140    3140    3140 ps

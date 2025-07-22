@@ -1,0 +1,41 @@
+1. GParted (GUI Disk Partition Manager) 
+What it does: Allows you to manage disk partitions (resize, delete, create). 
+     Underlying Commands: 
+• parted – for creating and resizing partitions 
+• mkfs – for formatting (e.g., mkfs.ext4, mkfs.ntfs) 
+• lsblk – lists block devices 
+• blkid – retrieves UUID and type of devices 
+________________________________________ 
+2. GNOME Software / Discover (GUI App Store) 
+What it does: Lets you install, remove, and update applications. 
+     Underlying Commands: 
+• apt (Debian/Ubuntu): sudo apt install packagename 
+• dnf (Fedora/RHEL): sudo dnf install packagename 
+• flatpak, snap – for sandboxed apps 
+• pkcon – for PackageKit (used in background) 
+________________________________________ 
+3. Nautilus (GNOME File Manager) 
+What it does: Provides a graphical interface to browse and manage files. 
+     Underlying Commands: 
+• cp, mv, rm, mkdir, touch – for file operations 
+• xdg-open or gio open – to open files in default apps 
+• chmod, chown – for permissions 
+• trash-cli (gio trash) – sends files to trash 
+-->>
+________________________________________ 
+4. System Monitor (GNOME/KSysGuard) 
+What it does: Displays CPU, memory, process, and disk usage. 
+     Underlying Commands: 
+• top or htop – shows running processes 
+• ps – lists system processes 
+• free – displays memory usage 
+• df – disk space usage 
+• iostat, vmstat – performance monitoring 
+________________________________________ 
+5. Network Manager GUI (nm-connection-editor) 
+What it does: Manages Wi-Fi, VPN, and Ethernet connections. 
+     Underlying Commands: 
+• nmcli – Network Manager CLI tool 
+• ip – configure network interfaces (IP address, routes) 
+• ping, dig, nslookup – for testing connectivity 
+• systemctl restart NetworkManager

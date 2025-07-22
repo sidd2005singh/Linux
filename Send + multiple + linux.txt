@@ -1,0 +1,41 @@
+Send Email from Terminal (using mailx + SMTP) 
+  Install mailx: 
+→sudo dnf install mailx 
+  Configure SMTP (e.g., Gmail): 
+→nano ~/.mailrc 
+→set smtp=smtp://smtp.gmail.com:587 
+   set smtp-auth=login 
+   set smtp-auth-user=your_email@gmail.com 
+   set smtp-auth-password=your_app_password 
+   set from="mits5371 @gmail.com" 
+  Send Email: -->echo "This is the body" | mailx -s "hii I am siddharth" siddharthsingh4132@example.com 
+    Gmail requires an App Password, not your main password. 
+
+-->>
+
+Send WhatsApp Message via Terminal (using Twilio API) 
+  Create a Twilio account and get: 
+• Account SID 
+• Auth Token 
+• WhatsApp-enabled Twilio number 
+  Install curl and use this command: --> curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACCOUNT_SID/Messages.json \ --> data-urlencode "From=whatsapp:+919352956727" \ --> data-urlencode "To=whatsapp:+91XXXXXXXXXX" \ --> data-urlencode "Body=Hello from RHEL 9 CLI" \ --> -u ACCOUNT_SID: 'ACbca2f4aa500aac75286c5a1416f4cd9c' 
+        auth_token = 'b8ad753475828cba9fab67b811cedfd6' 
+
+-->>
+Tweet from Terminal (using t CLI tool) 
+  Install Ruby & t: 
+➔ sudo dnf install ruby 
+➔ gem install t 
+  Authorize with Twitter: 
+➔ t authorize 
+  Send Tweet: 
+➔ t update "Hello world from RHEL 9 CLI! #Linux" 
+    Twitter API access is limited; you may need a paid developer account. 
+
+-->>
+Send SMS via Terminal (using Twilio SMS API) 
+  Use this curl command: -->curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACCOUNT_SID/Messages.json \ 
+--data-urlencode "To=+91XXXXXXXXXX" \ 
+--data-urlencode "From=+1YOUR_TWILIO_NUMBER" \ 
+--data-urlencode "Body=Hello, this is a test SMS from RHEL 9 CLI" \
+-u ACCOUNT_SID:AUTH_TOKEN 

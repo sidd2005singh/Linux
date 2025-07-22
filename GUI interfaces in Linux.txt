@@ -1,0 +1,33 @@
+→ [root@siddredhat alacritty]# sudo dnf install tmux 
+================================================================================ 
+ Package               Architecture            Version                        Repository             Size 
+================================================================================ 
+Installing: 
+ tmux                  x86_64                  3.2a-5.el9                     dvd2                  476 k 
+ 
+Transaction Summary 
+================================================================================ 
+Install  1 Package 
+→ [root@siddredhat alacritty]# sudo dnf install i3 i3status dmenu xterm 
+This system is not registered with an entitlement server. You can use "rhc" or "subscription
+manager" to register. 
+→ [root@siddredhat alacritty]# sudo dnf install rofi 
+Updating Subscription Management repositories. 
+================================================================================ 
+ Package                      Architecture         Version                       Repository          Size 
+================================================================================ 
+Installing group/module packages: 
+ cockpit-podman               noarch               101-1.el9                     dvd1               556 k 
+ podman                       x86_64               5:5.4.0-1.el9                 dvd1                17 M 
+→ Installing Environment Groups: 
+ Server with GUI 
+Installing Groups: 
+ base-x 
+ Container Management 
+ Core 
+ Fonts 
+ GNOME 
+ Guest Desktop Agents 
+ Hardware Monitoring Utilities
+→ sudo systemctl reboot 
+→ ➜  ~ ls 
